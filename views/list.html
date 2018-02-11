@@ -1,0 +1,8 @@
+<div>
+  <h1>播放列表</h1>
+  <ul>
+    <% for (let i = 0; i < audio.length; i++) { %>
+    <li data-link="<%= audio[i].src%>"><%= audio[i].name%> - <%= audio[i].singer%></li>
+    <% } %>
+  </ul>
+</div>

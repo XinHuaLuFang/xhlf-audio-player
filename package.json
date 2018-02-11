@@ -1,0 +1,11 @@
+{
+  "name": "xhlf-audio-player",
+  "version": "0.1.0",
+  "scripts": {
+    "player": "node index.js"
+  },
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-ejs": "^4.1.0"
+  }
+}
