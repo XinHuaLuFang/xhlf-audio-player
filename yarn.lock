@@ -38,7 +38,7 @@ debug@*:
   dependencies:
     ms "2.0.0"
 
-debug@^2.6.1:
+debug@^2.6.1, debug@^2.6.3, debug@^2.6.8:
   version "2.6.9"
   resolved "http://registry.npm.taobao.org/debug/download/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -91,13 +91,21 @@ http-assert@^1.1.0:
     deep-equal "~1.0.1"
     http-errors "~1.6.1"
 
-http-errors@^1.2.8, http-errors@~1.6.1:
+http-errors@^1.2.8, http-errors@^1.6.1, http-errors@~1.6.1:
   version "1.6.2"
   resolved "http://registry.npm.taobao.org/http-errors/download/http-errors-1.6.2.tgz#0a002cc85707192a7e7946ceedc11155f60ec736"
   dependencies:
     depd "1.1.1"
     inherits "2.0.3"
     setprototypeof "1.0.3"
+    statuses ">= 1.3.1 < 2"
+
+http-errors@~1.5.0:
+  version "1.5.1"
+  resolved "http://registry.npm.taobao.org/http-errors/download/http-errors-1.5.1.tgz#788c0d2c1de2c81b9e6e8c01843b6b97eb920750"
+  dependencies:
+    inherits "2.0.3"
+    setprototypeof "1.0.2"
     statuses ">= 1.3.1 < 2"
 
 inherits@2.0.3:
@@ -140,6 +148,22 @@ koa-ejs@^4.1.0:
 koa-is-json@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/koa-is-json/download/koa-is-json-1.0.0.tgz#273c07edcdcb8df6a2c1ab7d59ee76491451ec14"
+
+koa-send@^4.1.0:
+  version "4.1.2"
+  resolved "http://registry.npm.taobao.org/koa-send/download/koa-send-4.1.2.tgz#92861d184c4d8458a54f92e6708e09b14d64111c"
+  dependencies:
+    debug "^2.6.3"
+    http-errors "^1.6.1"
+    mz "^2.6.0"
+    resolve-path "^1.3.3"
+
+koa-static@^4.0.2:
+  version "4.0.2"
+  resolved "http://registry.npm.taobao.org/koa-static/download/koa-static-4.0.2.tgz#6cda92d88d771dcaad9f0d825cd94a631c861a1a"
+  dependencies:
+    debug "^2.6.8"
+    koa-send "^4.1.0"
 
 koa@^2.4.1:
   version "2.4.1"
@@ -217,6 +241,21 @@ only@0.0.2:
 parseurl@^1.3.0:
   version "1.3.2"
   resolved "http://registry.npm.taobao.org/parseurl/download/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
+
+path-is-absolute@1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/path-is-absolute/download/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
+
+resolve-path@^1.3.3:
+  version "1.3.3"
+  resolved "http://registry.npm.taobao.org/resolve-path/download/resolve-path-1.3.3.tgz#4d83aba6468c2b8e632a575e3f52b0fa0dbe1a5c"
+  dependencies:
+    http-errors "~1.5.0"
+    path-is-absolute "1.0.1"
+
+setprototypeof@1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/setprototypeof/download/setprototypeof-1.0.2.tgz#81a552141ec104b88e89ce383103ad5c66564d08"
 
 setprototypeof@1.0.3:
   version "1.0.3"

@@ -1,11 +1,16 @@
 const path = require('path');
 const Koa = require('koa');
 const render = require('koa-ejs');
+const static = require('koa-static');
 
 const src = require('./config').src;
 const walk = require('./walk');
 
 const app = new Koa();
+
+app.use(static(
+  path.join(__dirname, './static')
+));
 
 render(app, {
   root: path.join(__dirname, 'views'),
