@@ -1,5 +1,10 @@
 # xhlf-audio-player
-> 基于 html5 audio 标签的音频播放器
+> koa音频播放器
+
+# Usage
+1. 修改配置文件`config.js`中的音频目录
+2. npm run player
+3. 浏览器访问 http://localhost:3000
 
 # TODOS
 - [x] koa-ejs 模板渲染

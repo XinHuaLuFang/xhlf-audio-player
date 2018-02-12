@@ -2,6 +2,9 @@ const path = require('path');
 const Koa = require('koa');
 const render = require('koa-ejs');
 
+const src = require('./config').src;
+const walk = require('./walk');
+
 const app = new Koa();
 
 render(app, {
@@ -12,22 +15,8 @@ render(app, {
   debug: false
 });
 
-app.use(function(ctx, next) {
-  ctx.state = ctx.state || {};
-  ctx.state.ip = ctx.ip;
-  return next();
-});
-
 app.use(async function(ctx) {
-  const audio = [{
-    name: 'aaa111',
-    singer: 'bbb111',
-    src: '/ccc111'
-  }, {
-    name: 'aaa222',
-    singer: 'bbb222',
-    src: '/cccc222'
-  }];
+  const audio = walk(src);
   await ctx.render('body', {
     audio
   });
